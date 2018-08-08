@@ -23,6 +23,7 @@ int ledWhite = D8; // ok
 String status = "off";
 
 int animation = 0;
+int animTime = 0;
 
 
 
@@ -60,20 +61,38 @@ void setup()
 }
 
 
+int loopIndex = 0;
+
 void loop()
 {
  server.handleClient();
- if(animation==1) 
+  if(animation==1)
+   {
+    //rainbow();
+    if(loopIndex>=3){loopIndex=0;}
+    if(loopIndex==0){rainbow(ledBlue,ledRed,animTime);}
+    if(loopIndex==1){rainbow(ledRed,ledGreen,animTime);}
+    if(loopIndex==2){rainbow(ledGreen,ledRed,animTime);}
+    loopIndex++;
+   }
+ 
+ if(animation==2) 
  {
      analogWrite( ledRed, 200);
      delay(100);
      analogWrite( ledRed, 0);
      delay(100);
  }
- if(animation==2)
- {
-  rainbow();
- }
+  if(animation==3)
+  {
+
+   if(loopIndex>=3){loopIndex=0;}
+    if(loopIndex==0){blikRgb(ledBlue,animTime);}
+    if(loopIndex==1){blikRgb(ledRed,animTime);}
+    if(loopIndex==2){blikRgb(ledGreen,animTime);}
+    loopIndex++;  
+  }
+ 
  
 }
 
@@ -92,14 +111,33 @@ void dataIn()
   String blue = jObject["b"];
   String white = jObject["w"];
   String animTemp = jObject["animation"];
+  String animTimeTemp = jObject["animTime"];
+  server.send(204,"");
+
   animation = animTemp.toInt();
+  animTime = animTimeTemp.toInt();
+  
   Serial.print("animation: ");
   Serial.println(animation);
-  server.send(204,"");
+  
+  Serial.print("animation tmie: ");
+  Serial.println(animTime);
+
+  
+  
   
   color(red.toInt(),green.toInt(),blue.toInt(),white.toInt());
  
    
+}
+void dataOut() 
+{
+ String temp;
+ server.sendHeader("Access-Control-Allow-Origin", "*");
+ temp="{\"status\":\""+status+"\"}";
+ server.send(200,"aplication/json",temp);
+ server.send(204,"");
+  
 }
 
 void color(int r,int g,int b,int w)
@@ -130,42 +168,25 @@ void color(int r,int g,int b,int w)
   if(w>250){digitalWrite(ledWhite, HIGH);}
  
 }
-void dataOut() 
+
+void rainbow(int led1,int led2,int time)
 {
- String temp;
- server.sendHeader("Access-Control-Allow-Origin", "*");
- temp="{\"status\":\""+status+"\"}";
- server.send(200,"aplication/json",temp);
- server.send(204,"");
+
+  for(int i = 0 ; i<=255; i+=5 )
+ {
   
+   analogWrite(led1, 255-i);
+   analogWrite(led2, i);
+   delay(time);
+ }
 }
-void rainbow()
+void blikRgb(int led,int time)
 {
-int time =10;
-   for(int i = 0 ; i<=255; i++ )
- {
   
-   analogWrite(ledBlue, 255-i);
-   analogWrite(ledRed, i);
-   delay(time);
- }
-
-  for(int i = 0 ; i<=255; i++ )
- {
-   
-   analogWrite(ledRed, 255-i);
-   analogWrite(ledGreen, i);
-   delay(time);
- }
- 
- 
-
-  for(int i = 0 ; i<=255; i++ )
- {
-   analogWrite(ledGreen, 255-i);
-   analogWrite(ledBlue, i);
-   delay(time);
- }
+  digitalWrite(led, HIGH);                                                    
+  delay(time);                     
+  digitalWrite(led, LOW);  
+  delay(time); 
 }
 
 
