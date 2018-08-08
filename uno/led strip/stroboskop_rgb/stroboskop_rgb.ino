@@ -27,4 +27,19 @@ void loop() {
   delay(time);
   
 */
+analogWrite( red, 255);
+  delay(time);
+  analogWrite(red, 0);
+  delay(time);
+
+  analogWrite( green, 255);
+  delay(time);
+  analogWrite(green, 0);
+  delay(time);
+
+  analogWrite( blue, 255);
+  delay(time);
+  analogWrite(blue, 0);
+  delay(time);
+  
 }
