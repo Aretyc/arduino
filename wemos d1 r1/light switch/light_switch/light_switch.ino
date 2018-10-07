@@ -8,7 +8,7 @@ ESP8266WebServer server;
 char* ssid = "tl-wr740n";
 char* password = "madagaskar123";
 
-IPAddress ip(192, 168, 0, 110); //static ip
+IPAddress ip(192, 168, 0, 111); //static ip
 IPAddress gateway(192, 168, 0, 1);   //IP Address of your WiFi Router (Gateway)
 IPAddress subnet(255, 255, 255, 0);  //Subnet mask
 IPAddress dns(192, 168, 0, 1);  //DNS
