@@ -14,7 +14,7 @@ IPAddress subnet(255, 255, 255, 0);  //Subnet mask
 IPAddress dns(192, 168, 0, 1);  //DNS
 String deviceName = "pokuj światło"; 
 
-String power = "off";
+String power = "on";
 
 
 // 
@@ -28,6 +28,7 @@ void setup() {
 // pin mode 
   
   pinMode(switchIn , OUTPUT);
+  digitalWrite(switchIn, HIGH);
 
   WiFi.hostname(deviceName);
   WiFi.config(ip, dns, gateway, subnet); 
