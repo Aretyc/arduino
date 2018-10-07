@@ -14,7 +14,7 @@ IPAddress subnet(255, 255, 255, 0);  //Subnet mask
 IPAddress dns(192, 168, 0, 1);  //DNS
 String deviceName = "pokuj światło"; 
 
-String power;
+String power = "off";
 
 
 // 
@@ -48,6 +48,7 @@ void setup() {
   server.on("/dataIn", HTTP_POST, dataIn);
   server.on("/dataOut",HTTP_POST, dataOut);
   server.begin();
+  dataOut();
 
 }
 
