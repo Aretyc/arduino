@@ -72,7 +72,8 @@ void loop()
     if(loopIndex>=3){loopIndex=0;}
     if(loopIndex==0){rainbow(ledBlue,ledRed,animTime);}
     if(loopIndex==1){rainbow(ledRed,ledGreen,animTime);}
-    if(loopIndex==2){rainbow(ledGreen,ledRed,animTime);}
+    if(loopIndex==2){rainbow(ledGreen,ledBlue,animTime);}
+
     loopIndex++;
    }
  
@@ -116,7 +117,7 @@ void dataIn()
 
   animation = animTemp.toInt();
   animTime = animTimeTemp.toInt();
-  
+  //if(animTime>0){status="off";}
   Serial.print("animation: ");
   Serial.println(animation);
   
@@ -148,7 +149,7 @@ void color(int r,int g,int b,int w)
   Serial.println(w);
   Serial.println(status);
 
-  if(r==0&g==0&b==0&w==0)
+  if(r==0&g==0&b==0&w==0&animTime<1)
   {
     status="off";
   }
