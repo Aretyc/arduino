@@ -15,13 +15,13 @@ IPAddress dns(192, 168, 0, 1);  //DNS
 String deviceName = "arduinoLed"; 
 
 
-int ledRed = D6; //ok 
-int ledGreen = D7; // ok 
-int ledBlue = D8; // ok 
-int ledWhite = D9; // ok 
+int ledRed = D5; //ok 
+int ledGreen = D6; // ok 
+int ledBlue = D7; // ok 
+int ledWhite = D8; // ok 
 
-int ledSwitch = D5;
-int lightSwitch  = D4;
+int ledSwitch = D4;
+int lightSwitch  = D3;
 
 String ledStatus = "off";
 String lightStatus = "on";
