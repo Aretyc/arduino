@@ -12,13 +12,13 @@ IPAddress ip(192, 168, 0, 110); //static ip
 IPAddress gateway(192, 168, 0, 1);   //IP Address of your WiFi Router (Gateway)
 IPAddress subnet(255, 255, 255, 0);  //Subnet mask
 IPAddress dns(192, 168, 0, 1);  //DNS
-String deviceName = "arduinoLed"; 
+String deviceName = "arduinoLedRoom"; 
 
 
-int ledRed = D5; //ok 
-int ledGreen = D6; // ok 
-int ledBlue = D7; // ok 
-int ledWhite = D8; // ok 
+int ledRed = D5;  
+int ledGreen = D6;  
+int ledBlue = D7; 
+int ledWhite = D8; 
 
 int ledSwitch = D4;
 int lightSwitch  = D3;

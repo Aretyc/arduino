@@ -22,7 +22,7 @@
 
 void setup() {
   // Set MIDI baud rate:
-  Serial.begin(31250);
+  Serial.begin(57600);
 }
 
 void loop() {
@@ -47,5 +47,5 @@ void loop() {
 void noteOn(int cmd, int pitch, int velocity) {
   Serial.write(cmd);
   Serial.write(pitch);
- // Serial.write(127);
+  Serial.write(127);
 }
