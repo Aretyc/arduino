@@ -6,4 +6,4 @@
 * wood or plywood 
 
 ## schematic 
-![schematic](./schematic.png | width=300)
+![schematic](./schematic.png | width=300px)
