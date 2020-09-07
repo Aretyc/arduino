@@ -1,4 +1,6 @@
 # drum pads 
+<img src="./icon.png " width="350px">
+
 ## parts:
 * arduino uno 
 * 6x rezistors 1M ohm 
