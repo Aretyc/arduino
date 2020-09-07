@@ -6,5 +6,5 @@
 * wood or plywood 
 
 ## schematic 
-![GitHub Logo](/schematic.png)
+![GitHub Logo](./schematic.png)
 Format: ![Alt Text](url)
