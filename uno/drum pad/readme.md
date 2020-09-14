@@ -29,8 +29,7 @@
  2. Upload sketch to arduino  [Arduino  Getting Started](https://www.arduino.cc/en/Guide/ArduinoUno)
  3. download and install [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
  4. create a virtual midi device <br> <img  src="./loopmidi.png "  width="300px">
- 5. download and install
- 6. bridge your arduino device with virtual midi device 
-   <img  src="./bridge.png "  width="300px">
+ 5. download and install [Hairless MIDI Serial Bridge](https://projectgus.github.io/hairless-midiserial)
+ 6. bridge your arduino device with virtual midi device <br> <img  src="./bridge.png "  width="300px">
  7.  choose your midi controller in DAW 
  
