@@ -34,3 +34,4 @@
  6. bridge your arduino device with virtual midi device 
    <img  src="./bridge.png "  width="300px">
  7.  choose your midi controller in DAW 
+ 
