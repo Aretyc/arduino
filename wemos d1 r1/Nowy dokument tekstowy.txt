@@ -1,0 +1,11 @@
+# device info
+**microcontroller**  - wemos d1 mini r2 
+**led Strip** - WS211 
+
+
+# wiring diagram
+
+D5 - light primary 
+D6 - light secondary 
+D7 - led data 
+
