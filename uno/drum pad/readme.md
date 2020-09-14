@@ -28,8 +28,7 @@
  1. download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software)
  2. Upload sketch to arduino  [Arduino  Getting Started](https://www.arduino.cc/en/Guide/ArduinoUno)
  3. download and install [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html)
- 4. create a virtual midi device 
-  <img  src="./loopmidi.png "  width="300px">
+ 4. create a virtual midi device <img  src="./loopmidi.png "  width="300px">
  5. download and install
  6. bridge your arduino device with virtual midi device 
    <img  src="./bridge.png "  width="300px">
