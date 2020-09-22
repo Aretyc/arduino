@@ -10,6 +10,8 @@
 
 * 6x rezistors 1M ohm
 
+* 1 rezistors 270 ohm
+
 * 6x piezo
 
 * wood or plywood

@@ -14,6 +14,8 @@ void setup() {
     values[i]=0;
     prevs[i]=0;
   }
+  pinMode(11, OUTPUT);
+  analogWrite(11, 30);
 }
 
 int maxValue(int array[] ){
@@ -43,10 +45,12 @@ void loop() {
       if(values[maxInput]>1024)values[maxInput] = 1024;
       noteOn(144,notes[maxInput],(values[maxInput]/8)-1);
       for(int i=0;i<6;i++) prevs[i]=values[i];
+      analogWrite(11, 100);
       delay(30);
       return;
     }
     for(int i=0;i<6;i++) prevs[i]=values[i];
+    analogWrite(11, 30);
 
 }
 
