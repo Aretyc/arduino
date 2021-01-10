@@ -5,8 +5,8 @@
 ESP8266WebServer server;
 
 // Wi-Fi sittings declaration 
-char* ssid = "tl-wr740n";
-char* password = "madagaskar123";
+char* ssid = "degrengolada24";
+char* password = "Gi4TcqoRVQiNpP5u";
 
 IPAddress ip(192, 168, 0, 110); //static ip
 IPAddress gateway(192, 168, 0, 1);   //IP Address of your WiFi Router (Gateway)
